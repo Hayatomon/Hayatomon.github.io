@@ -73,6 +73,7 @@
       viewer.scene.globe.tileCacheSize = 1000;
       viewer.scene.globe.maximumScreenSpaceError = 2;
 
+<!--
       var heightOffset = 100036.5633; // @MK
 
       var polygon = viewer.entities.add({
@@ -92,6 +93,9 @@
         	outlineColor : Cesium.Color.BLACK
 	}
       });
+-->
+      viewer.dataSources.add(Cesium.GeoJsonDataSource.load('mitakokusai_with_bf.geojson',{
+	      stroke: Cesium.Color.BLACK, strokeWidth: 5}));
       viewer.dataSources.add(Cesium.KmlDataSource.load('cornes_210113_s.kmz'));
       viewer.zoomTo(polygon, new Cesium.HeadingPitchRange(0,-Math.PI / 4, 400));
 //      viewer.camera.flyTo({

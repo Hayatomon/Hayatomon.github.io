@@ -96,7 +96,7 @@
 -->
       viewer.dataSources.add(Cesium.GeoJsonDataSource.load('mitakokusai_with_bf.geojson',{
 	      stroke: Cesium.Color.BLACK, strokeWidth: 5}));
-      viewer.dataSources.add(Cesium.KmlDataSource.load('cornes_210113_s.kmz'));
+      viewer.dataSources.add(Cesium.KmlDataSource.load('cornes_210113_s.kmz',{ellipsoid: Ellipsoid.WGS84}));
       viewer.zoomTo(polygon, new Cesium.HeadingPitchRange(0,-Math.PI / 4, 400));
 //      viewer.camera.flyTo({
 //		destination: Cesium.Cartesian3.fromDegrees(139.744395, 35.652667, 625)
